@@ -1,0 +1,70 @@
+CREATE TABLE `financeiro`.`acessor` (
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT '',
+  `nome` VARCHAR(45) NULL COMMENT '',
+  `apelido` VARCHAR(45) NULL COMMENT '',
+  `data_admissao` DATE NULL COMMENT '',
+  PRIMARY KEY (`id`)  COMMENT '');
+
+
+CREATE TABLE `financeiro`.`telefone` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(45) NULL,
+  `numero` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
+
+
+
+matricula toda hora: 
+data, hora ida, hora volta.
+matriculas (nome, paga, pendente)
+ telefones, 
+ numero de abordagens,
+ com quantas deram atencao, 
+quantas matriculou no curso intensivo
+ quantas matriculou normal
+ contatos. 
+
+
+
+CREATE TABLE `finaceiro`.`ligacao` (
+  `id` INT NOT NULL,
+  `idtelefone` INT NULL,
+  `idacessor` INT NULL,
+  `data` DATETIME NULL,
+  `observacao` VARCHAR(500) NULL,
+  `grauinteresse` INT NULL,
+  `situacao` INT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `id_ligacao_acessor_idx` (`idacessor` ASC),
+  INDEX `id_ligacao_telefone_idx` (`idtelefone` ASC),
+  CONSTRAINT `id_ligacao_acessor`
+    FOREIGN KEY (`idacessor`)
+    REFERENCES `finaceiro`.`acessor` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `id_ligacao_telefone`
+    FOREIGN KEY (`idtelefone`)
+    REFERENCES `finaceiro`.`telefone` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+COMMENT = '	';
+
+
+
+USE `finaceiro`;
+CREATE 
+     OR REPLACE ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `viewpadrao` AS
+    SELECT 
+        `ac`.`apelido` AS `apelido`, `tel`.`nome` AS `nome`, `tel`.`numero` as `numero`
+    FROM
+        ((`acessor` `ac`
+        JOIN `ligacao` `lig`)
+        JOIN `telefone` `tel`)
+    WHERE
+        ((`ac`.`id` = `lig`.`idacessor`)
+            AND (`lig`.`idtelefone` = `tel`.`id`));
+
+

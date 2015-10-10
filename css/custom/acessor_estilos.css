@@ -1,0 +1,47 @@
+.borda-visivel{
+    border: 1px solid black;
+}
+.lista-botoes{
+    display: block;
+    width: 100%;
+}
+.lista-botoes > button{
+    width: 100%;
+}
+.imagem-cabecalho{
+width: 200px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+body{
+    background-color: #eee ;
+    font-family: "Agency FB";
+}
+.branco{
+    color: white;
+
+
+}
+.fundocinza{
+
+}
+.tamanho-completo{
+    width: 100%;
+}
+
+.azul-wizard{
+    background-color: #132D60;
+    font-size: 15pt;
+    border-radius: 10px;
+
+}
+
+.reduzido{
+    background-color: #A3A9A5;
+    border-radius: 10px;
+    color: black;
+}
+.azul-wizard:focus{
+    background-color: blac;
+}
