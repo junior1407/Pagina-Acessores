@@ -1,0 +1,10 @@
+Formato cartão
+Resolver problema clicar fora para mudar cor
+Remove line between divs.
+Plus sign = Adding
+pencil sign = editing
+cross sign = deleting
+Só um collapse aberto por vez.
+
+Aumentar padding superior logo. 
+Deixar mesmo padding superior e inferior
