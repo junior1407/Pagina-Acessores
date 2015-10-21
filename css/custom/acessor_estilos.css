@@ -1,3 +1,7 @@
+.btn{
+    outline: 0px !important;
+}
+
 .borda-visivel{
     border: 1px solid black;
 }
@@ -10,18 +14,62 @@
 }
 .imagem-cabecalho{
 width: 200px;
-    margin-top: 30px;
+    margin-top: 20px;
+    padding-top: 10px;
     margin-bottom: 30px;
 
 }
+.cinzaTopo{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#919191+0,eeeeee+100 */
+    background: #919191; /* Old browsers */
+    background: -moz-linear-gradient(top,  #919191 0%, #eeeeee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#919191), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #919191 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #919191 0%,#eeeeee 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #919191 0%,#eeeeee 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #919191 0%,#eeeeee 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#919191', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+
+}
+
 body{
     background-color: #eee ;
     font-family: "Agency FB";
+
 }
+.bordas-zeradas{
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px ;
+    border-top-left-radius: 0px;
+    border-top-right-radius:0px ;
+}
+
+.topico{
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px ;
+    border-top-left-radius: 0px;
+    border-top-right-radius:10px ;
+}
+
+.ultimo{
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px ;
+
+    border-top-right-radius:0px ;
+    border-bottom-left-radius: 10px !important;
+}
+
 .branco{
     color: white;
 
 
+}
+
+.reduzido{
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px ;
+    border-top-left-radius: 0px;
+    border-top-right-radius:0px ;
 }
 .fundocinza{
 
@@ -30,18 +78,35 @@ body{
     width: 100%;
 }
 
-.azul-wizard{
-    background-color: #132D60;
+.azul-wizard, .azul-wizard:hover{
+    background-color: #090040;
     font-size: 15pt;
-    border-radius: 10px;
 
+}
+
+.light-blue{
+    color: #00F2FF;;
+
+}
+.azul-wizard:focus{
+    background-color: #06002D;
+    color: #00F2FF;
+}
+.azul-wizard:focus > li{
+    color: red;
+}
+.preto{
+    color: black;
 }
 
 .reduzido{
-    background-color: #A3A9A5;
-    border-radius: 10px;
+    background-color: white;
+
     color: black;
 }
-.azul-wizard:focus{
-    background-color: blac;
+
+
+.reduzido:hover{
+    background-color: #D3D4D4 !important;
+    color:#06002D;
 }
