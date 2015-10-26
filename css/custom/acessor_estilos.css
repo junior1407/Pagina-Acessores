@@ -1,3 +1,13 @@
+
+.btn-primary{
+    border: 0px solid;
+}
+
+.red{
+    color: red;
+
+}
+
 .btn{
     outline: 0px !important;
 }
@@ -44,7 +54,7 @@ body{
     border-top-right-radius:0px ;
 }
 
-.topico{
+.topico-primeiro{
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px ;
     border-top-left-radius: 0px;
@@ -65,7 +75,7 @@ body{
 
 }
 
-.reduzido{
+.sub-topico {
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px ;
     border-top-left-radius: 0px;
@@ -74,11 +84,9 @@ body{
 .fundocinza{
 
 }
-.tamanho-completo{
-    width: 100%;
-}
 
-.azul-wizard, .azul-wizard:hover{
+
+.azul-wizard, .azul-wizard:hover, .azul-wizard:focus{
     background-color: #090040;
     font-size: 15pt;
 
@@ -88,25 +96,25 @@ body{
     color: #00F2FF;;
 
 }
-.azul-wizard:focus{
-    background-color: #06002D;
-    color: #00F2FF;
+.topico-aberto{
+    background-color: #06002D !important;
+    color: #00F2FF !important;
 }
-.azul-wizard:focus > li{
+.topico-aberto > li{
     color: red;
 }
 .preto{
     color: black;
 }
 
-.reduzido{
+.sub-topico {
     background-color: white;
-
     color: black;
+    width: 100%;
 }
 
 
-.reduzido:hover{
+.sub-topico:hover{
     background-color: #D3D4D4 !important;
     color:#06002D;
 }
